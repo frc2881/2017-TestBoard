@@ -1,8 +1,8 @@
-# 2016TestBoard
+# 2017TestBoard
 
 Programs for exploring various features of the 2 test boards.
 
-## Test Board Hardware
+## Mobile Test Board Hardware
 
 The Mobile Test Board is designed to be able to mount inside a robot as a quick way of adding a control system to an existing chassis.
 
@@ -28,3 +28,7 @@ http://roborio-2881-frc.local.
 
 - [CTR Power Distribution Panel](http://www.ctr-electronics.com/pdp.html)
   - CAN port 10
+
+## Classroom Test Board Hardware
+
+TODO
