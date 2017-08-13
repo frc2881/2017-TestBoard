@@ -1,8 +1,10 @@
+# Ant
+build
+
 # Maven
 target
 
 # Eclipse
-*.project
 *.settings
 /bin
 
