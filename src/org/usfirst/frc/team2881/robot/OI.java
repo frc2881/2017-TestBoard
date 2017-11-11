@@ -32,30 +32,30 @@ public class OI {
 
     /** Configure XboxController */
 	public final XboxController driverController = new XboxController(0);
-	
+
 	//Map functions on the controller
 	public final Button highGear = new JoystickButton(driverController,6);		//assign highGear to bumper button
 	public final Button flipForward = new JoystickButton(driverController,3); 	//assign pink box button makes robot drive facing forwards
 	public final Button flipBackward = new JoystickButton(driverController,2); 	//assign red circle button makes robot drive facing backwards
-	public final Button scoreGear = new JoystickButton(driverController,5);  	//assign left bumper to score the gear
+	public final Button scoreGear = new JoystickButton(driverController,4);  	//assign left bumper to score the gear
 
-    
+
     //Other possible Press buttons:
     public final Button blueX = new JoystickButton(driverController,1);					//maps blue X button
-    public final Button greenTriangle = new JoystickButton(driverController,4);			//maps green triangle button
+    public final Button greenTriangle = new JoystickButton(driverController, 5);			//maps green triangle button
     public final Button dualScreenButton = new JoystickButton(driverController,7);		//maps small upper left button (dual screen button)
     public final Button optionsButton = new JoystickButton(driverController,8);			//maps small upper right options button
     public final Button leftJoystickPress = new JoystickButton(driverController,9);		//maps pressing down left joystick
     public final Button rightJoystickPress = new JoystickButton(driverController,10);	//maps pressing down right joystick
-    
-    //Axis Buttons for driving you should use in a separate driveWithJoysticks class, but if you want to 
+
+    //Axis Buttons for driving you should use in a separate driveWithJoysticks class, but if you want to
     //get a simple "this is pressed" from one of the axis buttons, do it like this.
     public final Button pickupGear = buttonFromAxis(driverController,3);  //assign right trigger button to picking up gear
-    
+
     //Since we don't have an operator joystick in our test system, bind climber to left lower trigger
     public final DoubleSupplier climbJoystick = () -> driverController.getTriggerAxis(Hand.kLeft);  		//maps simple press of left lower trigger
-    
-    
+
+
     //POV button is more complicated so we'll add that later
 
     public void initCommands() {    //Now that we've mapped all the buttons, now we can set what happens when they are pressed/activated
@@ -71,11 +71,11 @@ public class OI {
         // Swap the idea of front-to-back
         flipForward.whenActive(new FlipForward());
         flipBackward.whenActive(new FlipBackward());
-        
-        //Insert here any new commands you want a button to run        
-        
+
+        //Insert here any new commands you want a button to run
+
     }
-   
+
     //with XboxController, there isn't a way to just see if a trigger axis button is pressed, so this method turns it into a button from an axis
     private Button buttonFromAxis(GenericHID controller, int axis) {
         return new Button() {
