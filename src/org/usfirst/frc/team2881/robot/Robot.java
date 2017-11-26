@@ -42,7 +42,7 @@ public class Robot extends IterativeRobot {
 
     private SendableChooser<Command> autonomousChooser;  //This stores which autonomous command is selected in SmartDashboard on drivers station
     private Command autonomousCommand;
-	    
+
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
@@ -62,11 +62,11 @@ public class Robot extends IterativeRobot {
 
         // Call initCommands method which wires controls to subsystems
         oi.initCommands();
-        
+
         //Sets up SmartDashboard so subsystems will show their currently
         //running command in SmartDashboard on the drivers station
-        SmartDashboard.putData(pneumatics);		 	 
-        SmartDashboard.putData(driveTrain);		
+        SmartDashboard.putData(pneumatics);
+        SmartDashboard.putData(driveTrain);
         SmartDashboard.putData(gearPouch);
         SmartDashboard.putData(climber);
 
@@ -85,9 +85,9 @@ public class Robot extends IterativeRobot {
      * Interfaces with the Java SmartDashboard to choose the command to run in autonomous mode.
      */
     private SendableChooser<Command> configureAutonomousMenu() {
-        // Build the menu of commands.  
+        // Build the menu of commands.
         Map<String, Command> commands = new LinkedHashMap<>();
-        commands.put("Drive Past Line", new DrivePastLine());
+        commands.put("Drive Past Line", new DrivePastLine()); //this is where we tell Autonomous what to do
         commands.put("Disabled", new InstantCommand());
 
         // Assume the first menu option is the default
@@ -103,9 +103,9 @@ public class Robot extends IterativeRobot {
             }
         });
         SmartDashboard.putData("Auto mode", chooser);
-        return chooser;            
+        return chooser;
     }
-    
+
 	/**
 	 * This function is called once each time the robot enters Disabled mode.
 	 * You can use it to reset any subsystem information you want to clear when
@@ -126,7 +126,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This autonomous (along with the chooser code above) shows how to select
 	 * between different autonomous modes using the dashboard. The sendable
-	 * chooser code works with the Java SmartDashboard. 
+	 * chooser code works with the Java SmartDashboard.
 	 *
 	 * You can add additional auto modes by adding additional commands to the
 	 * chooser code above (like the commented example) or additional comparisons
@@ -162,7 +162,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		log();
+		log();  //calls each subsystems log to update values into the SmartDashboard
 	}
 
 	/**
