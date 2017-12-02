@@ -12,7 +12,7 @@ import static org.usfirst.frc.team2881.robot.Robot.robotMap;
  * Autonomous command drives forward for a few seconds at half speed in low gear.
  */
 public class DrivePastLine extends TimedCommand {
-    private static final double DURATION = 15;  // seconds
+    private static final double DURATION = 5;  // seconds
     private static final double CURRENT_SAFETY_THRESHOLD = 20;  // current in amps
 
     private final DriveTrain driveTrain = Robot.driveTrain;  //gets a handle on the DriveTrain subsystem initialized in Robot.java

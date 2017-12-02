@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2881.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.TimedCommand;
 import org.usfirst.frc.team2881.robot.Robot;
 import org.usfirst.frc.team2881.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team2881.robot.subsystems.GearPouch;
@@ -8,12 +9,13 @@ import org.usfirst.frc.team2881.robot.subsystems.GearPouch;
 /**
  * Gear pouch strategy for hanging a gear on the peg.
  */
-public class ScoreGear extends Command {
+public class ScoreGear extends TimedCommand {
 
     private final GearPouch gearPouch = Robot.gearPouch;
     private final DriveTrain driveTrain = Robot.driveTrain;
 
     public ScoreGear() {
+        super(3);
         requires(gearPouch);
         requires(driveTrain);
     }
@@ -39,11 +41,6 @@ public class ScoreGear extends Command {
                 driveTrain.stop();
             }
         }
-    }
-
-    @Override
-    protected boolean isFinished() {
-        return false;
     }
 
     @Override
