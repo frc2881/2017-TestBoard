@@ -43,7 +43,7 @@ public class OI {
     //Other possible Press buttons:
     public final Button blueX = new JoystickButton(driverController,1);					//maps blue X button
     public final Button greenTriangle = new JoystickButton(driverController, 5);			//maps green triangle button
-    public final Button dualScreenButton = new JoystickButton(driverController,7);		//maps small upper left button (dual screen button)
+public final Button dualScreenButton = new JoystickButton(driverController,7);		//maps small upper left button (dual screen button)
     public final Button optionsButton = new JoystickButton(driverController,8);			//maps small upper right options button
     public final Button leftJoystickPress = new JoystickButton(driverController,9);		//maps pressing down left joystick
     public final Button rightJoystickPress = new JoystickButton(driverController,10);	//maps pressing down right joystick

@@ -35,8 +35,9 @@ public class RobotMap {
     public final RobotDrive robotDrive = new RobotDrive(
             frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
 
+
     public final CANTalon climberRatchetMotor = new CANTalon(0);
-    
+
     public final CANTalon testMotorCANTalon2 = new CANTalon(2);
     public final CANTalon gearIntakeMotor = new CANTalon(1);
     public final int gearIntakeMotorPdpChannel = 3;
