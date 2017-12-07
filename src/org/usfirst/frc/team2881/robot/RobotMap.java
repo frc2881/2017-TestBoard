@@ -28,15 +28,15 @@ public class RobotMap {
     // PWM Outputs (0-9)
     //IMPORTANT NOTE: We have 4 Spark controllers on one test board and 8 on the other, so sticking to 0-3 is better
     //so we don't accidentally try to run a motor that doesn't exist.  For CANTalons we have 0-3 as well.
-    private final Spark rearLeftMotor = new Spark(3);//the number corresponds to the PWM port on the robot/test board
-    private final Spark rearRightMotor = new Spark(2);
-    private final Spark frontLeftMotor = new Spark(1);
-    private final Spark frontRightMotor = new Spark(0);
+    private final Spark rearLeftMotor = new Spark(2);//the number corresponds to the PWM port on the robot/test board
+    private final Spark rearRightMotor = new Spark(3);
+    private final Spark frontLeftMotor = new Spark(0);
+    private final Spark frontRightMotor = new Spark(1);
     public final RobotDrive robotDrive = new RobotDrive(
             frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
 
     public final CANTalon climberRatchetMotor = new CANTalon(0);
-    
+
     public final CANTalon testMotorCANTalon2 = new CANTalon(2);
     public final CANTalon gearIntakeMotor = new CANTalon(1);
     public final int gearIntakeMotorPdpChannel = 3;
