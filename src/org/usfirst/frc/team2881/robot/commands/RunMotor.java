@@ -2,6 +2,7 @@ package org.usfirst.frc.team2881.robot.commands;
 
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.TimedCommand;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**
@@ -20,6 +21,7 @@ public class RunMotor extends TimedCommand {
 
     @Override
     protected void initialize() {
+        SmartDashboard.putNumber("Frosty the Snowman", speed);
     }
 
     @Override
