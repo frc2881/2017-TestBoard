@@ -20,7 +20,7 @@ import java.util.Map;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
-public class Robot extends IterativeRobot {
+public class                                                                                         Robot extends IterativeRobot {
 
     public static RobotMap robotMap;            //This is where connections to the robot are defined
     // public static OI oi;						//This is the operator inputs like controllers, etc.
