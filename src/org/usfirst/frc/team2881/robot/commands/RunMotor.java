@@ -13,7 +13,7 @@ public class RunMotor extends TimedCommand {
     private final double speed;
 
     public RunMotor(SpeedController motor, double duration, double speed) {
-        super(duration);        //Calls TimedCommand (parent class) with a time set by 'duration'
+        super(duration * 200);        //Calls TimedCommand (parent class) with a time set by 'duration'
         this.motor = motor;
         this.speed = speed;
     }
