@@ -359,7 +359,22 @@ public class RunTestBoard2Components extends CommandGroup {
         addSequential(new RunMotor(RobotMap.spark5, 1.5, 0.5));
         addSequential(new RunMotor(RobotMap.spark6, 1.5, 0.5));
         //all the kids wanna be him
-
+        addSequential(new RunMotor(RobotMap.spark0, 1, 0.5));
+        addSequential(new RunMotor(RobotMap.spark1, 1.5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark2, 1.5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark3, .5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark4, .5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark5, 1.5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark6, 1.5, 0.5));
+        //go crazy when they see him
+        addSequential(new RunMotor(RobotMap.spark0, 1, 0.5));
+        addSequential(new RunMotor(RobotMap.spark1, 1.5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark2, 1.5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark3, .5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark4, .5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark5, 1.5, 0.5));
+        addSequential(new RunMotor(RobotMap.spark6, 1.5, 0.5));
+        //go crazy when they see him
 
 
 
